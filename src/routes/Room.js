@@ -53,6 +53,7 @@ const Room = (props) => {
     const backendURL = process.env.REACT_APP_API || "http://localhost:8000";
 
     useEffect(() => {
+        alert(`backendURL is ${backendURL}`);
         socketRef.current = io.connect(backendURL);
         navigator.mediaDevices.getUserMedia({ video: videoConstraints, audio: true }).then(stream => {
             //srcObject：HTMLMediaElementインターフェイスのプロパティ
