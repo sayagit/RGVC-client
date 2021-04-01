@@ -50,7 +50,7 @@ const Room = (props) => {
     const userVideo = useRef();
     const peersRef = useRef([]);
     const roomID = props.match.params.roomID;
-    const backendURL = process.env.REACT_APP_API || "http://localhost:8000";
+    const backendURL = process.env.REACT_APP_API;
 
     useEffect(() => {
         alert(`backendURL is ${backendURL}`);
