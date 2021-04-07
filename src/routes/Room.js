@@ -53,7 +53,6 @@ const Room = (props) => {
     const backendURL = process.env.REACT_APP_API;
 
     useEffect(() => {
-        alert(backendURL)
         socketRef.current = io.connect(backendURL);
         navigator.mediaDevices.getUserMedia({ video: videoConstraints, audio: true }).then(stream => {
             //srcObject：HTMLMediaElementインターフェイスのプロパティ
